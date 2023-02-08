@@ -754,9 +754,9 @@ class KmerBitmap:
 
         self.close()
 
-        for step in self.steps:
-            subprocess.check_call([
-                "bgzip", "-r", "-I", self.idx_fname(step), self.bgz_fname(step)])
+        #for step in self.steps:
+        #    subprocess.check_call([
+        #        "bgzip", "-r", "-I", self.idx_fname(step), self.bgz_fname(step)])
 
     def close(self):
         for f in self.bitmaps.values():
